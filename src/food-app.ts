@@ -1,12 +1,21 @@
 export default function foodApp() {
-    // OOPに基づいた実装を学ぶ
+    /*
+    OOP(オブジェクト指向プログラミング)に基づいた実装
+    */
+
+    /**
+     * Score用クラス
+     */
     class Score {}
 
+    /**
+     * Foodロジック用クラス（要素はFoodsクラスから取得する）
+     */
     class Food {
         constructor(public element: HTMLDivElement) {
             element.addEventListener(
                 'click',
-                this.clickEventHandler.bind(this), //これがないとclickEventHandlerのthisはFoodクラスではなくelementを取得してしまう
+                this.clickEventHandler.bind(this), //bind():clickEventHandlerのthisはelementではなくFoodクラスだと宣言してる
             );
         }
         clickEventHandler() {
@@ -14,6 +23,9 @@ export default function foodApp() {
         }
     }
 
+    /**
+     * Food要素の取得用クラス
+     */
     class Foods {
         elements = document.querySelectorAll<HTMLDivElement>('.food');
         constructor() {
