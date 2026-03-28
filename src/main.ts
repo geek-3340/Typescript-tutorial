@@ -1,3 +1,3 @@
-import { cls } from "./class";
+import foodApp from "./food-app";
 
-cls();
+foodApp();
