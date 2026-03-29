@@ -2,18 +2,18 @@
 OOP(オブジェクト指向プログラミング)に基づいた実装
 */
 export default function foodApp() {
-    interface ScoreAble{
-        readonly totalScore:number;
-        render():void;
+    interface FoodsAble{
+        elements:NodeListOf<HTMLDivElement>;
+        readonly activeElements:HTMLDivElement[];
+        readonly activeElementsScore:number[];
     }
     interface FoodAble{
         element:HTMLDivElement;
         clickEventHandler():void;
     }
-    interface FoodsAble{
-        elements:NodeListOf<HTMLDivElement>;
-        readonly activeElements:HTMLDivElement[];
-        readonly activeElementsScore:number[];
+    interface ScoreAble{
+        readonly totalScore:number;
+        render():void;
     }
 
     /**
