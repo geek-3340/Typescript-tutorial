@@ -1,3 +1,3 @@
-import foodApp from "./food-app";
+import advanced from "./advanced";
 
-foodApp();
+advanced();
