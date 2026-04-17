@@ -213,4 +213,13 @@ export default function () {
         id: 3
     }
     console.log(downloadedData.user?.name?.first); // ？でプロパティがあれば、、という書き方になる
+
+
+    /*
+    null型演算子
+    */
+    const userData = downloadedData.user ?? "no-user"; // ??で左辺がnullまたはundefinedの時は、右辺の値を返す
+
+
+    
 }
